@@ -14,7 +14,7 @@ public class CoreTestCase extends TestCase {
     private static String AppiumUrl = "http://127.0.0.1:4723/wd/hub";
 
     // for run Mac
-    private static String PathApk = "/Users/evgeniy_g/coures/project/java_appium_course_ios/apks/org.wikipedia.apk";
+    private static String PathApk = "/Users/evgeniy_g/coures/project/JavaAppiumMobAppNotMaven/apks/org.wikipedia.apk";
     // for run Windows
     // private static String PathApk = "D:\\[courses]\\project\\\\java_appium_android_2020\\apks\\org.wikipedia.apk";
 

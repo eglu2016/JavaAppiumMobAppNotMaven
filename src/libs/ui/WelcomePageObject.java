@@ -2,6 +2,7 @@ package libs.ui;
 
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class WelcomePageObject extends ui.MainPageObject {
 
@@ -22,9 +23,9 @@ public class WelcomePageObject extends ui.MainPageObject {
     }
 
     public void waitForLearnMoreLink() {
-        this.waitForElementPresent(By.id(STEP_LEARN_MORE_LINK),
+        WebElement element = this.waitForElementPresent(By.id(STEP_LEARN_MORE_LINK),
                 "Cannot find 'Learn more about Wikipedia' link",
-                15);
+                20);
     }
 
     public void waitForNewWaysToExploreText() {
@@ -46,12 +47,14 @@ public class WelcomePageObject extends ui.MainPageObject {
     }
 
     public void clickNextLink() {
-        this.waitForElementPresent(By.id(NEXT_LINK),
-                "Cannot find and click 'Next' button");
+        this.waitForElementAndClick(By.id(NEXT_LINK),
+                "Cannot find and clicks 'Next' button",
+                5);
     }
 
     public void clickGetStartedButton() {
-        this.waitForElementPresent(By.id(GET_STARTED_BUTTON),
-                "Cannot find and click 'Get started' button");
+        this.waitForElementAndClick(By.id(GET_STARTED_BUTTON),
+                "Cannot find and click 'Get started' button",
+                5);
     }
 }

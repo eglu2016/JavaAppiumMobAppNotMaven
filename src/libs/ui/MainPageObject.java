@@ -32,7 +32,7 @@ public class MainPageObject {
      */
     public WebElement waitForElementPresent(By by, String error_message, long timeoutInSecond) {
         WebDriverWait wait = new WebDriverWait(driver, timeoutInSecond);
-        wait.withMessage(error_message + "\n");
+        wait.withMessage("\n" + error_message + "\n" + by.toString() + "\n");
         WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(by));
         return element;
     }

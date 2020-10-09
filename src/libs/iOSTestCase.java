@@ -10,7 +10,6 @@ import java.time.Duration;
 
 public class iOSTestCase extends TestCase {
     protected AppiumDriver driver;
-    private static String AppiumUrl = "http://127.0.0.1:4723/wd/hub";
 
     // for run Mac
     private static String PathApk = "/Users/evgeniy_g/coures/project/JavaAppiumMobAppNotMaven/apks/Wikipedia.app";
@@ -23,7 +22,7 @@ public class iOSTestCase extends TestCase {
         сapabilities.setCapability("deviceName", "iPhone SE");
         сapabilities.setCapability("platformVersion", "11.3");
         сapabilities.setCapability("app", PathApk);
-        driver = new IOSDriver(new URL(AppiumUrl), сapabilities);
+        driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), сapabilities);
         this.rotateScreenPortrait();
     }
 
